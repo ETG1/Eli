@@ -9,23 +9,25 @@ const Photo = () => {
       <motion.div 
         initial={{ opacity: 0 }} 
         animate={{ 
-          opacity: 1, transition: { delay: 2, duration: 0.4, ease: "easeIn"},
+          opacity: 1,
+          transition: { delay: 2, duration: 0.4, ease: "easeIn"},
         }}>
-          {/* Image */}
+        {/* Image */}
         <motion.div
-        initial={{ opacity: 0 }} 
-        animate={{ 
-          opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeInOut"},
-        }}
-        
-        className="w-[248px] h-[248px] xl:w-[398px] xl:h-[298px] mix-blend-lighten absolute">
+          initial={{ opacity: 0 }} 
+          animate={{ 
+            opacity: 1,
+            transition: { delay: 2.4, duration: 0.4, ease: "easeInOut"},
+          }}
+          className="w-[248px] h-[248px] xl:w-[398px] xl:h-[298px] mix-blend-lighten dark:mix-blend-lighten mix-blend-normal absolute"
+        >
           <Image 
             src="/assets/Ph0t0.png"
             priority
             quality={100}
             fill
             alt=""
-            className="object-contain"
+            className="object-contain dark:invert"
           />
         </motion.div>
         {/* Circle */}

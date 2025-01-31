@@ -4,6 +4,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/s
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci"
+import { Button } from "@/components/ui/button";
 
 const links = [
     {
@@ -21,10 +22,6 @@ const links = [
     {
         name: "my work",
         path: "/work",
-    },
-    {
-        name: "contact",
-        path: "/contact",
     },
 ];
 
@@ -62,6 +59,11 @@ const MobileNav = () => {
                             </SheetClose>
                         );
                     })}
+                    <SheetClose asChild>
+                        <Link href="/contact" className="mt-4">
+                            <Button variant="outline" size="lg">Let's Talk</Button>
+                        </Link>
+                    </SheetClose>
                 </nav>
             </SheetContent>
         </Sheet>

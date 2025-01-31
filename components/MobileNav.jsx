@@ -61,7 +61,7 @@ const MobileNav = () => {
                     })}
                     <SheetClose asChild>
                         <Link href="/contact" className="mt-4">
-                            <Button variant="outline" size="lg">Let's Talk</Button>
+                            <Button variant="outline" size="md">Let's Talk</Button>
                         </Link>
                     </SheetClose>
                 </nav>

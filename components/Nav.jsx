@@ -45,9 +45,6 @@ const Nav = () => {
                     );
                 })}
             </nav>
-            <Link href="/contact">
-                <Button variant="outline" size="sm">Let's Talk</Button>
-            </Link>
         </div>
     );
 };

@@ -39,7 +39,7 @@ const MobileNav = () => {
                 {/*Logo*/}
                 <div className="mb-8 text-center">
                     <Link href="/">
-                        <h1 className="text-4xl font-semibold">
+                        <h1 className="text-4xl font-semibold text-primary dark:text-white">
                             Eli<span className="text-cyan-400">.</span>
                         </h1>
                     </Link>
@@ -54,8 +54,8 @@ const MobileNav = () => {
                                     className={`${
                                         link.path === pathname 
                                         ? "text-cyan-400 border-b-2 border-cyan-400" 
-                                        : "text-white/70"
-                                    } text-lg capitalize hover:text-cyan-400 transition-all`}
+                                        : "text-primary/70 dark:text-white/70 hover:text-cyan-400 dark:hover:text-cyan-400"
+                                    } text-lg capitalize transition-all`}
                                 >
                                     {link.name}
                                 </Link>

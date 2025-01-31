@@ -4,16 +4,16 @@ import CountUp from "react-countup";
 
 const stats = [
     {
-        num: 3,
-        text: "Years Of Expirience",
+        num: 2,
+        text: "Years Of Experience",
     },
     {
-        num: 12,
+        num: 5,
         text: "Projects Completed",
     },
     {
         num: 8,
-        text: "Technoligies Mastered",
+        text: "Technologies Mastered",
     },
     {
         num: 498,
@@ -33,9 +33,9 @@ const Stats = () => {
                                     end={item.num} 
                                     duration={5} 
                                     delay={2}
-                                    className="text-4xl xl:text-4xl font-extrabold" 
+                                    className="text-4xl xl:text-4xl font-extrabold text-primary dark:text-white" 
                                 />
-                                <p className={`${item.text.length < 12 ? "max-w-[100px]" : "max-w-[150px]" } leading-snug text-white/80`}>{item.text}</p>
+                                <p className={`${item.text.length < 12 ? "max-w-[100px]" : "max-w-[150px]" } leading-snug text-primary/60 dark:text-white/60`}>{item.text}</p>
                             </div>
                         );
                     })}

@@ -30,7 +30,7 @@ const services = [
   },
 ];
 
-import { easeIn, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Services = () => {
   return <section className="min-h-[66vh] flex flex-col justify-center py-8 xl:py-0">
@@ -49,16 +49,16 @@ const Services = () => {
               {/* top */}
               <div className="w-full flex justify-between items-center">
                 <div className="text-4xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">{service.num}</div>
-                <Link href={service.href} className="w-[40px] h-[40px] rounded-full bg-white group-hover:bg-cyan-400 transition-all duration-500 flex justify-center items-center hover:-rotate-45 ">
+                <Link href={service.href} className="w-[40px] h-[40px] rounded-full bg-white/10 dark:bg-white group-hover:bg-cyan-400 transition-all duration-500 flex justify-center items-center hover:-rotate-45">
                   <BsArrowDownRight className="text-primary text-2xl"/>
                 </Link>
               </div>
               {/* title */}
-              <h2 className="text-[28px] font-bold leading-none text-white group-hover:text-cyan-400 transition-all duration-500">{service.title}</h2>
+              <h2 className="text-[28px] font-bold leading-none text-primary dark:text-white group-hover:text-cyan-400 transition-all duration-500">{service.title}</h2>
               {/* description */}
-              <p className="text-white/65">{service.description}</p>
+              <p className="text-primary/60 dark:text-white/60">{service.description}</p>
               {/* border */}
-              <div className="border-b border-white/20 w-full"></div>
+              <div className="border-b border-primary/20 dark:border-white/20 w-full"></div>
             </div>
           );
         })}

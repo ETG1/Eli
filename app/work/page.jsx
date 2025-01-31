@@ -80,11 +80,11 @@ const Work = () => {
                 {project.num}
               </div>
               {/* project category */}
-              <h2 className="text-[32px] font-bold leading-none text-white group-hover:text-cyan-400 transition-all duration-500 capitalize">
+              <h2 className="text-[32px] font-bold leading-none text-primary dark:text-white group-hover:text-cyan-400 transition-all duration-500 capitalize">
                 {project.category} Project                
               </h2>
               {/* project description */}
-              <p className="text-white/60">
+              <p className="text-primary/60 dark:text-white/60">
                 {project.description}
               </p>
               {/* stack */}
@@ -100,15 +100,15 @@ const Work = () => {
                 })}
               </ul>
               {/* underline */}
-              <div className="border border-white/20"></div>
+              <div className="border border-primary/20 dark:border-white/20"></div>
               {/* buttons */}
               <div className="flex items-center gap-4 mt-2">
                 {/* live project button */}
                 <Link href={project.live}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className="w-[50px] h-[50px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight className="text-white text-2xl group-hover:text-cyan-400"/>
+                      <TooltipTrigger className="w-[50px] h-[50px] rounded-full bg-primary/5 dark:bg-white/5 flex justify-center items-center group">
+                        <BsArrowUpRight className="text-primary dark:text-white text-2xl group-hover:text-cyan-400"/>
                       </TooltipTrigger>
                       <TooltipContent>
                         <p>Live Project</p>
@@ -116,12 +116,12 @@ const Work = () => {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
-                {/* live project button */}
+                {/* github button */}
                 <Link href={project.github}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className="w-[50px] h-[50px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsGithub className="text-white text-2xl group-hover:text-cyan-400"/>
+                      <TooltipTrigger className="w-[50px] h-[50px] rounded-full bg-primary/5 dark:bg-white/5 flex justify-center items-center group">
+                        <BsGithub className="text-primary dark:text-white text-2xl group-hover:text-cyan-400"/>
                       </TooltipTrigger>
                       <TooltipContent>
                         <p>Github Repository</p>
@@ -142,7 +142,7 @@ const Work = () => {
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[360px] relative group flex justify-center items-center bg-pink-50/20 rounded-xl">
+                    <div className="h-[360px] relative group flex justify-center items-center bg-primary/5 dark:bg-pink-50/20 rounded-xl">
                     {/* overlay */}
                     <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10">
                     </div>
@@ -159,7 +159,7 @@ const Work = () => {
                   </SwiperSlide>
                 );
               })}
-              {/* slider buttons xl:bottom-0*/}
+              {/* slider buttons */}
               <WorkSliderBtns
                 containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_2px)] xl:top-0 xl:bottom-0 z-10 w-full justify-between xl:w-max xl:justify-none "
                 btnStyles="bg-cyan-400/40 hover:bg-cyan-400-hover text-primary text-[22px] w-[34px] h-[34px] flex justify-center items-center transition-all rounded-xl" 
@@ -170,6 +170,6 @@ const Work = () => {
       </div>
     </motion.section>    
   );
-};
+}
 
 export default Work;

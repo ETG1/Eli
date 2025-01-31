@@ -8,11 +8,11 @@ import Stats from "@/components/Stats";
 
 const Home = () => {
   return (
-    <section className="h-full">
-      <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
+    <section className="h-screen flex flex-col justify-between">
+      <div className="container mx-auto flex-1 flex flex-col">
+        <div className="flex flex-col xl:flex-row items-center justify-center h-full gap-x-8">
           {/*text*/}
-          <div className="text-center xl:text-left order-2 xl:order-none ">
+          <div className="text-center xl:text-left">
             <span className="text-xl mb-2 text-primary/80 dark:text-white/80">Software Developer</span>
             <h1 className="h1 mb-2">
               Hi I'm <br/> <span className="text-cyan-400">Eli The Great</span>
@@ -32,7 +32,7 @@ const Home = () => {
             </div>
           </div>
           {/*photo*/}
-          <div className="order-1 xl:order-none mb-4 xl:mb-0">
+          <div className="mb-4 xl:mb-0">
             <Photo/>
           </div>
         </div>

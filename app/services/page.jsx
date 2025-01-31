@@ -8,25 +8,25 @@ const services = [
     num: "01",
     title: "Web Development",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, vero?",
-    href: ""
+    href: "/services/web-development"
   },
   {
     num: "02",
     title: "Graphics Design",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, vero?",
-    href: ""
+    href: "/services/graphics-design"
   },
   {
     num: "03",
     title: "Logo Design",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, vero?",
-    href: ""
+    href: "/services/logo-design"
   },
   {
     num: "04",
     title: "App Development",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, vero?",
-    href: ""
+    href: "/services/app-development"
   },
 ];
 

@@ -1,10 +1,12 @@
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "next-themes";
 
 //components
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 const jetbrainsMono = JetBrains_Mono({ 
   subsets: ["latin"],
@@ -19,13 +21,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={jetbrainsMono.variable}>
-        <Header/>
-        <StairTransition/>
-        <PageTransition>
-          {children}
-        </PageTransition>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <Header/>
+          <StairTransition/>
+          <PageTransition>
+            {children}
+          </PageTransition>
+          <ThemeSwitcher />
+        </ThemeProvider>
       </body>
     </html>
   );

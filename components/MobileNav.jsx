@@ -1,6 +1,6 @@
 "use client";
 
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci"
@@ -26,8 +26,7 @@ const links = [
         name: "contact",
         path: "/contact",
     },
-
-]
+];
 
 const MobileNav = () => {
     const pathname = usePathname();
@@ -36,21 +35,31 @@ const MobileNav = () => {
             <SheetTrigger className="flex justify-center items-center">
                 <CiMenuFries className="text-[32px] text-cyan-400" />
             </SheetTrigger>
-            <SheetContent className="flex flex-col">
+            <SheetContent>
                 {/*Logo*/}
-                <div className="mt-32 mb-32 text-center text-2xl ">
+                <div className="mb-8 text-center">
                     <Link href="/">
-                        <h1 className="text-4xl font-semibold">Eli <span className="text-cyan-400">.</span>
+                        <h1 className="text-4xl font-semibold">
+                            Eli<span className="text-cyan-400">.</span>
                         </h1>
                     </Link>
                 </div>
                 {/*Nav*/}
-                <nav className="flex flex-col justify-center items-center gap-6">
+                <nav className="flex flex-col justify-center items-center gap-4">
                     {links.map((link, index) => {
                         return (
-                            <Link href={link.path} key={index} className={`${link.path === pathname && "text-cyan-400 border-b-2 border-cyan-400"} text-xl capitalize hover:text-cyan-400 transition-all`}>
-                                {link.name}
-                            </Link>
+                            <SheetClose asChild key={index}>
+                                <Link 
+                                    href={link.path}
+                                    className={`${
+                                        link.path === pathname 
+                                        ? "text-cyan-400 border-b-2 border-cyan-400" 
+                                        : "text-white/70"
+                                    } text-lg capitalize hover:text-cyan-400 transition-all`}
+                                >
+                                    {link.name}
+                                </Link>
+                            </SheetClose>
                         );
                     })}
                 </nav>

@@ -43,7 +43,7 @@ const ThemeSwitcher = () => {
       <div className="relative">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center justify-center w-10 h-10 rounded-full bg-cyan-400/20 backdrop-blur-sm border border-white/10 text-white hover:bg-cyan-400/30 transition-all duration-300"
+          className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/5 dark:bg-white/10 backdrop-blur-sm border border-primary/10 dark:border-white/10 text-primary dark:text-white hover:bg-primary/10 dark:hover:bg-white/20 transition-all duration-300"
         >
           {currentTheme.icon}
         </button>
@@ -55,7 +55,7 @@ const ThemeSwitcher = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}
               transition={{ duration: 0.2 }}
-              className="absolute bottom-12 right-0 min-w-[150px] py-2 rounded-lg bg-white/10 backdrop-blur-md border border-white/10"
+              className="absolute bottom-12 right-0 min-w-[150px] py-2 rounded-lg bg-white/80 dark:bg-white/10 backdrop-blur-md border border-primary/10 dark:border-white/10"
             >
               {themes.map((t) => (
                 <button
@@ -64,7 +64,7 @@ const ThemeSwitcher = () => {
                     setTheme(t.value);
                     setIsOpen(false);
                   }}
-                  className="flex items-center gap-2 w-full px-4 py-2 text-sm text-white hover:bg-cyan-400/20 transition-colors"
+                  className="flex items-center gap-2 w-full px-4 py-2 text-sm text-primary dark:text-white hover:bg-primary/5 dark:hover:bg-white/5 transition-colors"
                 >
                   {t.icon}
                   <span>{t.name}</span>

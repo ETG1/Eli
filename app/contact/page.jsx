@@ -56,9 +56,10 @@ const Contact = () => {
                   <SelectValue placeholder="Select Subject" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="general">General Inquiry</SelectItem>
-                  <SelectItem value="programming">Programming</SelectItem>
-                  <SelectItem value="collaboration">Collaboration</SelectItem>
+                  <SelectItem value="est">Web Development</SelectItem>
+                  <SelectItem value="cst">Graphics Design</SelectItem>
+                  <SelectItem value="mst">Logo Design</SelectItem>
+                  <SelectItem value="nst">App Development</SelectItem>
                 </SelectContent>
               </Select>
               {/* textarea */}

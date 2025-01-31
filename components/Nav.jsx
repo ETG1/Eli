@@ -17,15 +17,14 @@ const links = [
         path: "/resume",
     },
     {
-        name: "my work",
+        name: "work",
         path: "/work",
     },
     {
         name: "contact",
         path: "/contact",
     },
-
-]
+];
 
 const Nav = () => {
     const pathname = usePathname();
@@ -34,8 +33,16 @@ const Nav = () => {
         <nav className="flex gap-8">
             {links.map((link, index) => {
                 return (
-                    <Link href={link.path} key={index} className={`${link.path === pathname && "text-cyan-400 border-b-2 border-cyan-400"} capitalize font-medium hover:text-cyan-400 transition-all`}>
-                    {link.name}
+                    <Link 
+                        href={link.path} 
+                        key={index} 
+                        className={`${
+                            link.path === pathname 
+                            ? "text-cyan-400 border-b-2 border-cyan-400" 
+                            : "text-primary/70 dark:text-white/70 hover:text-cyan-400 dark:hover:text-cyan-400"
+                        } capitalize font-medium transition-all`}
+                    >
+                        {link.name}
                     </Link>
                 );
             })}
@@ -43,4 +50,4 @@ const Nav = () => {
     );
 };
 
-export default Nav
+export default Nav;

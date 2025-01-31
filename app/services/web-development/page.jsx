@@ -39,12 +39,41 @@ const WebDevelopment = () => {
           </div>
 
           {/* Pricing */}
-          <div className="mb-16">
+          <div className="mb-8">
             <h2 className="h3 mb-4">Pricing</h2>
             <div className="space-y-4 text-primary/80 dark:text-white/80">
               <p><span className="font-semibold">Basic Website</span> (up to 5 pages, no custom features): R10,000 - R15,000</p>
               <p><span className="font-semibold">E-commerce Website</span> (up to 50 products, payment integration): R25,000 - R40,000</p>
               <p><span className="font-semibold">Custom Web Development</span> (large-scale projects, custom features): R50,000 and up, depending on complexity</p>
+            </div>
+          </div>
+
+          {/* Pricing and Terms */}
+          <div className="mb-16">
+            <h2 className="h3 mb-4">Pricing and Terms</h2>
+            
+            <div className="space-y-6 text-primary/80 dark:text-white/80">
+              <div>
+                <h3 className="font-semibold mb-2">Tailored Solutions for Every Budget</h3>
+                <p>Each project is unique, and I strive to provide custom solutions that meet your specific needs and objectives. The prices listed are estimates, and the final cost may vary based on the complexity of the project, additional features, or revisions required.</p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold mb-2">Payment Structure</h3>
+                <p>To ensure a smooth workflow, I require a 50% deposit before starting work on any project. The remaining balance is due upon completion and before the final deliverables are provided. For long-term projects, we can arrange a suitable payment schedule.</p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold mb-2">Hourly Rates</h3>
+                <p>For ongoing services such as maintenance, updates, or revisions, my hourly rate ranges from R500 to R1,500, depending on the scope of the work.</p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold mb-2">Project Timeline</h3>
+                <p>I aim to provide realistic timelines and will work closely with you to ensure your project is completed to your satisfaction, within the agreed-upon timeframe. If any significant changes or delays occur, I will inform you promptly.</p>
+              </div>
+
+              <p className="italic">If you have any questions about pricing or would like a personalized quote, please don't hesitate to get in touch.</p>
             </div>
           </div>
 

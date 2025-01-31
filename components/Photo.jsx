@@ -5,34 +5,18 @@ import Image from "next/image";
 
 const Photo = () => {
   return (
-    <div className="w-full h-full relative"> 
+    <div className="w-full h-full relative flex items-center justify-center"> 
       <motion.div 
         initial={{ opacity: 0 }} 
         animate={{ 
           opacity: 1,
           transition: { delay: 2, duration: 0.4, ease: "easeIn"},
-        }}>
-        {/* Image */}
-        <motion.div
-          initial={{ opacity: 0 }} 
-          animate={{ 
-            opacity: 1,
-            transition: { delay: 2.4, duration: 0.4, ease: "easeInOut"},
-          }}
-          className="w-[248px] h-[248px] xl:w-[398px] xl:h-[298px] absolute"
-        >
-          <Image 
-            src="/assets/Ph0t0.png"
-            priority
-            quality={100}
-            fill
-            alt=""
-            className="object-contain mix-blend-darken dark:mix-blend-lighten"
-          />
-        </motion.div>
+        }}
+        className="relative"
+      >
         {/* Circle */}
         <motion.svg 
-          className="w-[250px] h-[250px] xl:w-[406px] xl:h-[320px]"
+          className="w-[250px] h-[250px] xl:w-[400px] xl:h-[400px]"
           fill="transparent"
           viewBox="0 0 506 506"
           xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +24,7 @@ const Photo = () => {
           <motion.circle 
             cx="253" 
             cy="253" 
-            r="260" 
+            r="250" 
             stroke="#22d3ee" 
             strokeWidth="4"
             strokeLinecap="round"
@@ -57,6 +41,26 @@ const Photo = () => {
             }}
           />
         </motion.svg>
+        {/* Image */}
+        <motion.div
+          initial={{ opacity: 0 }} 
+          animate={{ 
+            opacity: 1,
+            transition: { delay: 2.4, duration: 0.4, ease: "easeInOut"},
+          }}
+          className="absolute inset-0 flex items-center justify-center"
+        >
+          <div className="w-[220px] h-[220px] xl:w-[350px] xl:h-[350px] relative">
+            <Image 
+              src="/assets/Ph0t0.png"
+              priority
+              quality={100}
+              fill
+              alt=""
+              className="object-contain mix-blend-darken dark:mix-blend-lighten"
+            />
+          </div>
+        </motion.div>
       </motion.div>
     </div>
   );

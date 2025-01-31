@@ -23,29 +23,25 @@ const stats = [
 
 const Stats = () => {
   return (
-    <section className="py-8 xl:py-11">
-      <div className="container mx-auto">
-        <div className="flex flex-wrap gap-x-8 gap-y-4 mx-auto">
-          {stats.map((item, index) => {
-            return ( 
-              <div className="min-w-[200px] flex-1 flex gap-4 items-center justify-center xl:justify-start" key={index}>
-                <CountUp 
-                  end={item.num} 
-                  duration={5} 
-                  delay={2}
-                  className="text-4xl xl:text-4xl font-extrabold text-primary dark:text-white" 
-                />
-                <p className={`${
-                  item.text.length < 12 ? "max-w-[100px]" : "max-w-[150px]"
-                } leading-snug text-primary/60 dark:text-white/60`}>
-                  {item.text}
-                </p>
-              </div>
-            );
-          })}
-        </div>  
-      </div>
-    </section>
+    <div className="max-w-[1000px] mx-auto">
+      <div className="flex flex-wrap justify-between gap-x-6 gap-y-3">
+        {stats.map((item, index) => {
+          return ( 
+            <div className="flex gap-3 items-center" key={index}>
+              <CountUp 
+                end={item.num} 
+                duration={5} 
+                delay={2}
+                className="text-3xl font-extrabold text-primary dark:text-white" 
+              />
+              <p className="text-sm text-primary/60 dark:text-white/60 max-w-[100px] leading-snug">
+                {item.text}
+              </p>
+            </div>
+          );
+        })}
+      </div>  
+    </div>
   );
 };
 

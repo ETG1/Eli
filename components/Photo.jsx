@@ -19,7 +19,7 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut"},
           }}
-          className="w-[248px] h-[248px] xl:w-[398px] xl:h-[298px] mix-blend-lighten dark:mix-blend-lighten mix-blend-normal absolute"
+          className="w-[248px] h-[248px] xl:w-[398px] xl:h-[298px] absolute"
         >
           <Image 
             src="/assets/Ph0t0.png"
@@ -27,7 +27,7 @@ const Photo = () => {
             quality={100}
             fill
             alt=""
-            className="object-contain dark:invert"
+            className="object-contain mix-blend-darken dark:mix-blend-lighten"
           />
         </motion.div>
         {/* Circle */}

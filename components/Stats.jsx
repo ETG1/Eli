@@ -23,25 +23,29 @@ const stats = [
 
 const Stats = () => {
   return (
-    <div className="max-w-[1000px] mx-auto">
-      <div className="flex flex-wrap justify-between gap-x-6 gap-y-3">
-        {stats.map((item, index) => {
-          return ( 
-            <div className="flex gap-3 items-center" key={index}>
-              <CountUp 
-                end={item.num} 
-                duration={5} 
-                delay={2}
-                className="text-3xl font-extrabold text-primary dark:text-white" 
-              />
-              <p className="text-sm text-primary/60 dark:text-white/60 max-w-[100px] leading-snug">
-                {item.text}
-              </p>
-            </div>
-          );
-        })}
-      </div>  
-    </div>
+    <section className="pt-4 pb-12 xl:pt-0 xl:pb-0">
+      <div className="container mx-auto">
+        <div className="flex flex-wrap gap-6 max-w-[80vw] mx-auto xl:max-w-none">
+          {stats.map((item, index) => {
+            return ( 
+              <div className="flex-1 flex gap-4 items-center justify-center xl:justify-start" key={index}>
+                <CountUp 
+                  end={item.num} 
+                  duration={5} 
+                  delay={2}
+                  className="text-4xl xl:text-4xl font-extrabold text-primary dark:text-white" 
+                />
+                <p className={`${
+                  item.text.length < 12 ? "max-w-[100px]" : "max-w-[150px]"
+                } leading-snug text-primary/60 dark:text-white/60`}>
+                  {item.text}
+                </p>
+              </div>
+            );
+          })}
+        </div>  
+      </div>
+    </section>
   );
 };
 

@@ -23,11 +23,11 @@ const projects = [
   {
     num: "01",
     category: "frontend",
-    title: "project 1",
+    title: "Car Dealership",
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe esse culpa quas voluptatem.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb1.png",
-    live: "",
+    stack: [{ name: "Next.js" }, { name: "React" }, { name: "TypeScript" }, { name: "Tailwind CSS" }],
+    image: "/assets/work/lm_motors.jpg",
+    live: "https://lm-motors.vercel.app/",
     github: "" 
   },
   {
@@ -36,7 +36,7 @@ const projects = [
     title: "project 2",
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe esse culpa quas voluptatem.",
     stack: [{ name: "Next,js" }, { name: "tailwind.css" }, { name: "node.js" }],
-    image: "/assets/work/thumb2.png",
+    image: "/assets/work/Hotel.jpg",
     live: "",
     github: "" 
   },

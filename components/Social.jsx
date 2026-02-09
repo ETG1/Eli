@@ -5,7 +5,7 @@ import { FaGithub, FaWhatsapp, FaTelegramPlane, FaInstagram } from "react-icons/
 const socials = [
     {Icon: <FaGithub/>, path: ""},
     {Icon: <FaWhatsapp/>, path: ""},
-    {Icon: <FaTelegramPlane/>, path: ""},
+    {Icon: <FaTelegramPlane/>, path: "https://t.me/Eli_The_Great"},
     {Icon: <FaInstagram/>, path: ""},
 ];
 
